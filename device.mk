@@ -31,6 +31,11 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-carbon
 endif
 
+ifeq ($(TARGET_PRODUCT),aosip_berkeley)
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-aosip
+endif
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
@@ -59,7 +64,7 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0
 
 # KeyHandler
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     org.lineageos.keyhandler
 
 # NFC
