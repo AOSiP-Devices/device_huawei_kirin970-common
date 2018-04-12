@@ -26,11 +26,6 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 endif
 
-ifeq ($(TARGET_PRODUCT),carbon_berkeley)
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-carbon
-endif
-
 ifeq ($(TARGET_PRODUCT),aosip_berkeley)
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-aosip
