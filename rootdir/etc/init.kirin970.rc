@@ -12,3 +12,13 @@ service hisupl_service /vendor/bin/hw/vendor.huawei.hardware.hisupl@1.0-service
     user system
     group system
     setenv LD_PRELOAD libshims_hisupl.so
+
+on property:sys.fpnav.enabled=0
+    write /sys/devices/platform/fingerprint/nav 0
+    stop fps_hal_ext
+    start fps_hal_ext
+
+on property:sys.fpnav.enabled=1
+    write /sys/devices/platform/fingerprint/nav 1
+    stop fps_hal_ext
+    start fps_hal_ext
