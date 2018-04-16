@@ -5,8 +5,8 @@
     "branch": "master"
   },
   {
-    "repository": "MindTheGapps/vendor_gapps",
-    "target_path": "vendor/gapps",
-    "branch": "master"
+    "repository": "platform_vendor_gapps",
+    "target_path": "vendor/kronicgapps",
+    "remote": "aosip"
   }
 ]
